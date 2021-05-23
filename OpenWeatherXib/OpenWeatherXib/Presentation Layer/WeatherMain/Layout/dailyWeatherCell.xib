@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dailyWeatherCell" id="KGk-i7-Jjw" customClass="DailyWeatherCell" customModule="OpenWeatherXib" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaR-lE-nSk">
+                        <rect key="frame" x="16" y="0.0" width="44" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+16" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BF-ME-RFS">
+                        <rect key="frame" x="275" y="0.0" width="29" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="EaR-lE-nSk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6Em-NH-Y7R"/>
+                    <constraint firstAttribute="bottom" secondItem="EaR-lE-nSk" secondAttribute="bottom" id="9aC-On-ISi"/>
+                    <constraint firstAttribute="trailing" secondItem="5BF-ME-RFS" secondAttribute="trailing" constant="16" id="CHK-Ps-lXg"/>
+                    <constraint firstItem="5BF-ME-RFS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="K3H-gk-HBG"/>
+                    <constraint firstItem="EaR-lE-nSk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="QJq-ua-74a"/>
+                    <constraint firstAttribute="bottom" secondItem="5BF-ME-RFS" secondAttribute="bottom" id="Svk-LD-tHn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dayLabel" destination="EaR-lE-nSk" id="Dcz-NO-lgh"/>
+                <outlet property="tempLabel" destination="5BF-ME-RFS" id="08h-Kp-FMJ"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="68"/>
+        </tableViewCell>
+    </objects>
+</document>
